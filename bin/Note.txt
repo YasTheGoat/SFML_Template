@@ -1,0 +1,4 @@
+This is your game with all the assets and script it needs to run
+You only need this folder[bin folder] for your game to work perfecty fine
+
+Enjoy!
