@@ -1,6 +1,6 @@
 @echo off
-
-if "%1"=="" exit 1
+set mode=%1
+if "%1"=="" echo No parameter was given after "build" & set /p mode=Select a mode release or debug(r or d):
 for %%I in (.) do set CurrDirName=%%~nxI
 echo compiling cpp files...
 g++ -I dependencies/include -c src/*.cpp
