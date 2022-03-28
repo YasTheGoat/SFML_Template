@@ -14,4 +14,8 @@ if "%mode%"=="r" echo setting up release files... & robocopy %cd% "bin" /XD "dep
 
 echo Build finished!
 if "%mode%"=="d" %CurrDirName%
+<<<<<<< HEAD
 cmd /k
+=======
+cmd /k
+>>>>>>> f862c908e329b47b7cbcc92129e1790911ed93b4
