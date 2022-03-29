@@ -1,6 +1,5 @@
 @echo off
 set mode=%1
-set text=""
 if "%mode%"=="" echo No parameter was given after "build" & set /p mode=Select a mode release or debug(r or d):
 if "%mode%"=="" exit 1
 for %%I in (.) do set CurrDirName=%%~nxI
@@ -16,9 +15,8 @@ del *.o
 if "%mode%"=="r" echo setting up release files... & robocopy %cd% "bin" /XD "dependencies" "src" "bin" ".vscode" /S NFL /NDL /NJH /NJS /nc /ns & del "bin\build.bat" & del %CurrDirName%".exe" &  echo release files successfully created(check the bin folder)!
 if "%mode%"=="d" echo. & echo. & echo. & echo Programe Output: & %CurrDirName%
 echo Build finished successfully!
-echo %text%
 
 :errorfunc
 del *.o > nul 2>&1
 del %CurrDirName%.exe > nul 2>&1
-exit 1
+exit 0
