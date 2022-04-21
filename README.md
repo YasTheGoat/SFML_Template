@@ -8,8 +8,7 @@ You will be prompted to enter a name for your project.
 Leave it for a couple of seconds and you will find your project outside yout current directory.
 
 Once your project is ready, open the folder and run the build.bat file to debug or release.
-All your programs have to be inside the src folder. If you have some experience with bat file you can also modify the build.bat file
-to handle your needs.
+Your cpp files can be anywhere in the project and the build file will handle the compilation. If you have some experience with bat files you can also modify the build.bat file to meet your needs(add dependencies or improve it for exemple).
 
 In the .vscode folder there is a tasks file that will alow you to simply use F5 when you are in vscode to quickly test your project.
 
