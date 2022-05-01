@@ -28,18 +28,20 @@ if "%mode%"=="r" (
     echo setting up release files... 
     robocopy %cd% "BIN" /XD "dependencies" "src" "bin" ".vscode" /S NFL /NDL /NJH /NJS /nc /ns
     del "BIN\build.bat"
-    del %CurrDirName%".exe"
     echo release files successfully created in the bin Folder!
 )
 if "%mode%"=="d" (
     echo.
     echo. 
     echo. 
-    echo Programe Output:
     %CurrDirName%
 )
 
+del %CurrDirName%".exe" 
+
+
 :errorfunc (
-    del *.o > nul 2>&1
+    del *.o > nul 2>&1 
     exit 0
 )
+
